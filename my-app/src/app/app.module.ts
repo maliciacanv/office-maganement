@@ -9,15 +9,17 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { VisitorTableComponent } from './components/visitor-table/visitor-table.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { NewVisitorComponent } from './components/new-visitor/new-visitor.component';
-
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     VisitorTableComponent,
     MenuComponent,
-    NewVisitorComponent
+    NewVisitorComponent,
+    FilterPipe
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
