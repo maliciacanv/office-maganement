@@ -1,1 +1,11 @@
-<button routerLink="/admin">Login</button>
+<form>
+    <div class="form-group">
+        <label for="">Correo electronico</label>
+        <input #email id="email" type="email" placeholder="Ingresa un correo electronico" name="uname">
+        <label for="">contraseña</label>
+        <input #password id="password" type="password" autocomplete="current-password" placeholder="Contraseña de 6 caracteres" name="psw" required>
+    </div>
+    <button type="button" (click)="addUser(email.value, password.value)">Register</button>
+</form>
+
+<!-- <button>Google</button> -->

@@ -11,6 +11,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { NewVisitorComponent } from './components/new-visitor/new-visitor.component';
 import { LoginComponent } from './components/login/login.component';
 import { FirebaseServiceService } from './services/firebase-service.service';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { FirebaseServiceService } from './services/firebase-service.service';
   ],
   imports: [
     BrowserModule,
+    AngularFireAuthModule,
     AppRoutingModule,
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebaseConfig)

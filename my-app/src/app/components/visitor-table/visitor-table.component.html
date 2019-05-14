@@ -18,7 +18,7 @@
             <td>{{visitor.empresaVistante}}</td>
             <td>{{visitor.persona}}</td>
             <td>{{visitor.empresaVisitda}}</td>
-            <td>{{visitor.fecha}}</td>
+            <td>{{visitor.fecha | date: 'short'}}</td>
             <td>{{visitor.salida}}</td>
             <td> <button>Finalizar visita</button> </td>
         </tr>
