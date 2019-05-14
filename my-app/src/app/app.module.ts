@@ -9,9 +9,11 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { VisitorTableComponent } from './components/visitor-table/visitor-table.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { NewVisitorComponent } from './components/new-visitor/new-visitor.component';
+import { FilterPipe } from './pipes/filter.pipe';
 import { LoginComponent } from './components/login/login.component';
 import { FirebaseServiceService } from './services/firebase-service.service';
 
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,13 +21,16 @@ import { FirebaseServiceService } from './services/firebase-service.service';
     VisitorTableComponent,
     MenuComponent,
     NewVisitorComponent,
+    FilterPipe,
     LoginComponent
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFirestoreModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    FormsModule
   ],
   providers: [FirebaseServiceService],
   bootstrap: [AppComponent]

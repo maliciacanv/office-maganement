@@ -13,9 +13,11 @@ import { FirebaseServiceService } from '../../services/firebase-service.service'
 export class VisitorTableComponent implements OnInit {
   visitors: any;
 
+ filterVisitante = '';
 
   constructor(public firestore: FirebaseServiceService) { 
     this.firestore.getVisitors().subscribe((data) => {
+      console.log(data)
       this.visitors = data;
     })
 
