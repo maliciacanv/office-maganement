@@ -1,3 +1,24 @@
-<p>
-  visitor-table works!
-</p>
+<h1>Visitantes</h1>
+<input type="text" name="filterVisitante" placeholder="Buscar visitante" [(ngModel)]="filterVisitante" >
+<table>
+    <thead>
+        <th>Foto</th>
+        <th>Nombre</th>
+        <th>Empresa</th>
+        <th>Comunero</th>
+        <th>Empresa a la que visita</th>
+        <th>Hora de entrada</th>
+        <th>Hora de salida</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let visitor of visitors | filter: filterVisitante">
+            <td>{{visitor.foto}}</td>
+            <td>{{visitor.nombre}}</td>
+            <td>{{visitor.empresaVistante}}</td>
+            <td>{{visitor.persona}}</td>
+            <td>{{visitor.empresaVisitda}}</td>
+            <td>{{visitor.entrada}}</td>
+            <td>{{visitor.salida}}</td>
+        </tr>
+    </tbody>
+</table>

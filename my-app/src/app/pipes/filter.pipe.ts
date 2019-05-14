@@ -5,13 +5,13 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(value: any, args: any): any {
+  transform(value: any, arg: any): any {
     const resultSearch = [];
-    for(const visitors of value) {
-      if (visitors.nombre.tolowerCase().indexOf(args.tolowerCase()) > -1) {
-        resultSearch.push(visitors)
-      }
-    }
+    for(const visitor of value) {
+      if (visitor.nombre.indexOf(arg) > -1 ) {
+        resultSearch.push(visitor)
+      };
+    };
     return resultSearch;
   }
  
