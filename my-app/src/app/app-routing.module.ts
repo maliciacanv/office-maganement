@@ -2,9 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { VisitorTableComponent } from './components/visitor-table/visitor-table.component';
 import { LoginComponent } from './components/login/login.component';
+import { NewVisitorComponent } from './components/new-visitor/new-visitor.component';
+
 const routes: Routes = [
   {path: '', component: LoginComponent},
-  {path: 'admin', component: VisitorTableComponent}
+  {path: 'admin', component: VisitorTableComponent},
+  {path: 'new-visitor', component: NewVisitorComponent}
 
 ];
 
