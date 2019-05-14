@@ -12,7 +12,14 @@ export class FirebaseServiceService {
 
   constructor(public firestore: AngularFirestore, 
               public auth: AngularFireAuth) { }
-
+  public Visitor = {
+    nombre: '',
+    correo: '',
+    empresaPorVisitada: '',
+    persona: '',
+    empresaVisitante: '',
+  };
+  
   getVisitors() {
     return this.firestore.collection('visitors').valueChanges();
   }
@@ -20,5 +27,17 @@ export class FirebaseServiceService {
   registerWithEmail(email: string, password: string) {
     return this.auth.auth.createUserWithEmailAndPassword(email, password);
   }
+  addVisitors(name, email, companyVisitador, comunero, comuneroVisitador){
+  const newObj = {
+    ...this.Visitor,
+    nombre: name,
+    correo: email,
+    empresaPorVisitada: companyVisitador,
+    persona: comunero,
+    empresaVisitante: comuneroVisitador
+  };
+    this.firestore.collection('visitors').add(newObj);
+    console.log('se envio a base de datos', newObj)
+  };
 
 }
