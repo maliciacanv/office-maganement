@@ -1,3 +1,4 @@
+<app-menu></app-menu>
 <h1>Visitantes</h1>
 <input type="text" name="filterVisitante" placeholder="Buscar visitante" [(ngModel)]="filterVisitante" >
 <table>
@@ -17,8 +18,9 @@
             <td>{{visitor.empresaVistante}}</td>
             <td>{{visitor.persona}}</td>
             <td>{{visitor.empresaVisitda}}</td>
-            <td>{{visitor.entrada}}</td>
+            <td>{{visitor.fecha}}</td>
             <td>{{visitor.salida}}</td>
+            <td> <button>Finalizar visita</button> </td>
         </tr>
     </tbody>
 </table>
