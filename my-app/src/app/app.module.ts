@@ -12,6 +12,7 @@ import { NewVisitorComponent } from './components/new-visitor/new-visitor.compon
 import { FilterPipe } from './pipes/filter.pipe';
 import { LoginComponent } from './components/login/login.component';
 import { FirebaseServiceService } from './services/firebase-service.service';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { FormsModule } from '@angular/forms';
 
@@ -27,6 +28,7 @@ import { FormsModule } from '@angular/forms';
   
   imports: [
     BrowserModule,
+    AngularFireAuthModule,
     AppRoutingModule,
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
