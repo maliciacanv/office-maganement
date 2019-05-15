@@ -1,27 +1,34 @@
 <app-menu></app-menu>
-<h1>Visitantes</h1>
-<input type="text" name="filterVisitante" placeholder="Buscar visitante" [(ngModel)]="filterVisitante" >
-<button class="" routerLink="/new-visitor">Nuevo visitante</button>
-<table>
+<div class="container">
+<h1 class="tittle-table">Visitantes</h1>
+<div class="botones">
+    <input class="input-table" type="text" name="filterVisitante" placeholder="Buscar visitante" [(ngModel)]="filterVisitante" >
+    <button class="button" routerLink="/new-visitor">Nuevo visitante</button>  
+</div>
+<div class="container-responsive">
+<table class= "container-table">
     <thead>
-        <th>Foto</th>
-        <th>Nombre</th>
-        <th>Empresa</th>
-        <th>Comunero</th>
-        <th>Empresa a la que visita</th>
-        <th>Hora de entrada</th>
-        <th>Hora de salida</th>
+        
+            <th scope="col">Foto</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Empresa</th>
+            <th scope="col">Comunero</th>
+            <th scope="col">Hora de entrada</th>
+            <th scope="col">Hora de salida  </th>
+            <th scope="col">              </th>
+        
     </thead>
     <tbody>
-        <tr *ngFor="let visitor of visitors | filter: filterVisitante">
-            <td>{{visitor.foto}}</td>
+        <tr css="table" scope="row" *ngFor="let visitor of visitors | filter: filterVisitante">
+            <td><img class="imagen" src="https://i.ibb.co/rZpqv7m/fondo-1.png"></td>
             <td>{{visitor.nombre}}</td>
-            <td>{{visitor.empresaVistante}}</td>
+            <td>{{visitor.empresaVisitante}}</td>
             <td>{{visitor.persona}}</td>
-            <td>{{visitor.empresaVisitda}}</td>
-            <td>{{visitor.fecha | date: 'short'}}</td>
-            <td>{{visitor.salida}}</td>
-            <td> <button>Finalizar visita</button> </td>
+            <td>{{visitor.fecha.toDate() | date: 'short'}}</td>
+            <td>{{today| date: 'short'}}</td>
+            <td> <button type="button" class="btn-finalizar" (click)="getOutVisitor(visitors, visitor.id)">Finalizar visita</button> </td>
         </tr>
     </tbody>
 </table>
+</div>
+</div>

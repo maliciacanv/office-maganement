@@ -1,11 +1,28 @@
-<form>
-    <div class="form-group">
-        <label for="">Correo electronico</label>
-        <input #email id="email" type="email" placeholder="Ingresa un correo electronico" name="uname">
-        <label for="">contraseña</label>
-        <input #password id="password" type="password" autocomplete="current-password" placeholder="Contraseña de 6 caracteres" name="psw" required>
-    </div>
-    <button type="button" (click)="addUser(email.value, password.value)">Iniciar sesión</button>
-</form>
 
-<!-- <button>Google</button> -->
+<header>
+    <div class="logo">
+        <img src="../../../assets/imagenes/logo.ico.png" alt="">
+    </div>
+</header>
+<form class="contenedor">
+        <h1 class="tittle">Iniciar Sesión</h1>
+    <div class="form-group">
+        <label for="">Correo electronico *</label>
+        <input #email id="email" type="email" placeholder="Ingresa un correo electronico" name="uname" autocomplete="email" required>
+        <label for="">contraseña *</label>
+        <input #password id="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" minlength="6" maxlength="15" title="Debe contener min 6 caracteres y max 15 caracteres, debe tener min 1 número y una mayúscula" autocomplete="password" placeholder="Contraseña de 6 caracteres" name="psw" required>
+    </div>
+    <button type="submit" class="btn-sesion" (click)="addUser(email.value, password.value)">Iniciar sesión</button>
+</form>
+<!-- <div class="field checkbox-container">
+        <label class="checkbox">
+            <input type="checkbox">
+        <div class="checkmark">
+
+        </div>
+        <div class="label">
+            <p class="principal">Acepto los terminos y condiciones establecidos en comunal</p>
+            <p class="subtitule">He leido las letras pequeños.</p>
+        </div>
+    </label>
+</div> -->
