@@ -27,6 +27,9 @@ export class FirebaseServiceService {
   registerWithEmail(email: string, password: string) {
     return this.auth.auth.createUserWithEmailAndPassword(email, password);
   }
+  loginEmailUser(email: string, password: string) {
+    return this.auth.auth.signInWithEmailAndPassword(email, password);
+  }
   addVisitors(name, email, companyVisitador, comunero, comuneroVisitador){
   const newObj = {
     ...this.Visitor,
