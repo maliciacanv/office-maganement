@@ -22,9 +22,11 @@ body{
 }
 .logo{
     padding: 18px 0px 0px;
+    
 }
 .logo img{
-  height: 45px;
+  width: 8%;
+ 
   padding: 0px 20px;
   float:left;
 }
@@ -32,6 +34,7 @@ body{
   margin-left: 48%;
 }
 .menu button{
+  margin-right: 20px;
   color: #000013;
   background-color: #FFffff;
   height: 50px;
@@ -41,7 +44,7 @@ body{
   border: 1px solid #f0f0f0;
   display: inline-block;
   font-size: 14px;
-  font-family: markMedium;
+  font-family: markRegular;
   margin-right: 5px;
 }
 .menu img{

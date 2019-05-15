@@ -17,9 +17,6 @@
     padding : 0;
     box-sizing : border-box;
   }
-body{
-  background-color: #fafafa;
-}
 .logo{
     padding: 18px 0px 0px;
 }
@@ -124,5 +121,8 @@ body{
       padding:95px;
       width: 100%;
     }
-  
+  }
+  span{
+    float: right;
+    margin-top: 12px;
   }

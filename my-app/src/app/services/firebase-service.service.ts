@@ -17,8 +17,19 @@ export class FirebaseServiceService {
     empresaPorVisitada: '',
     persona: '',
     empresaVisitante: '',
+    id:"",
     fechaDeSalida:''
   };
+
+  public invitados = {
+    nombreDvistante: '',
+    fechaDeLlegada: '',
+    horaDeLlegada: '',
+    email: '',
+    empresaVisitada: '',
+    notas: '',
+
+  }
 
   public visitantesData = new BehaviorSubject([]);
   visitantes = this.visitantesData.asObservable();
@@ -76,4 +87,19 @@ export class FirebaseServiceService {
   });
 
   }
+  
+  addInvitacion(nombre, fecha, hora, email, empresavisitada, notas){
+  const newObjInvitados = {
+    ...this.invitados,
+    nombreDvistante: nombre,
+    fechaDeLlegada: fecha,
+    horaDeLlegada: hora,
+    email: email,
+    empresaVisitada: empresavisitada,
+    notas: notas,
+  }
+  this.firestore.collection('invitados').add(newObjInvitados);
+  }
+
+
 }
