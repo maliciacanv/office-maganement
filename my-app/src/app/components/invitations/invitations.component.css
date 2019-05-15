@@ -33,7 +33,7 @@
   
   .container {
     border-radius: 100px;
-    margin-top: 10%;
+    /* margin-top: 10%; */
   }
   
   .container-1 {
@@ -49,7 +49,7 @@
   
   input:focus{
     outline: none !important;
-    border:1px solid #00a8cd;
+    border:1px solid #00a8cd !important;
     box-shadow: none !important;
   }
   
@@ -58,6 +58,7 @@
     margin-top: 20px;
     font-weight: bolder;
     font-family: montserratRegular;
+    display: block;
   }
   input {
     font-size: 16px;
@@ -97,23 +98,4 @@
     font-size: 16px;
     margin-top: 2%;
     font-weight: bolder;
-  }
-
-  h4{
-    margin-top: 20px;
-  }
-  .container-img img{
-height: 620px;
-margin-top: 50px;
-
-  }
-  .container{
-    position: absolute;
-    width: 50%;
-    padding: 16px;
-    margin-top: 200px;
-    top:50%;
-    left: 50%;
-    transform: translateX(-20%) translateY(-81%);
-    background-color: #fafafa;
   }
