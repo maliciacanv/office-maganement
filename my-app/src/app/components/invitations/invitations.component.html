@@ -1,23 +1,42 @@
-<app-menu></app-menu>
-<article>
-    <form>
-        <div>
-            <h1 class="btn">Invitacion</h1>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="invitados.css">
+    <title>Document</title>
+</head>
+<body>
+    <article>
+            <header>
+                <div class="contenedor-header">
+                    <div class="logo">
+                        <img src="../img/logo.ico.png" alt="">
+                    </div>
+                    <nav class="menu">
+                        <button type="button"><img src="../img/visitante.png">Visitantes</button>
+                        <button type="button"><img src="../img/reunion.png">Invitados</button>
+                    </nav>
+                </div>
+        </header>
+    <form class="container-form">
+        <h1 class="tittle">Invitacion</h1>
         <!-- <div>
             <img src="" alt="foto del usuario registrado manual">
         </div> -->
         <div>
-            <input #name type="text" placeholder="Ingresar nombre">
-            <span>+</span>
-            <span>-</span>
+            <div class="contenido-personas">
+                <input type="text" placeholder="Ingresar nombre">
+                <button type="button">+</button> <button type="button">-</button>
+            </div>
+            <input  type="text" placeholder="Ingresar correo" required>
+            <input  type="text" placeholder="Empresa de donde viene" required>
+            <input  type="text" placeholder="A quien visita?" required>
+            <input  type="text" placeholder="Empresa a la que visita" required>
         </div>
-        <input #email type="text" placeholder="Ingresar correo" required>
-        <input #companyVisitor type="text" placeholder="Empresa de donde viene" required>
-        <input #comunero type="text" placeholder="A quien visita?" required>
-        <input #comuneroCompany type="text" placeholder="Empresa a la que visita" required>
-        <div>
-            <button class="btn" type="submit">Guardar</button>
-        </div>
+        <button class="btn-guardar" type="submit">Guardar</button>
     </form>
 </article>
+</body>
+</html>
