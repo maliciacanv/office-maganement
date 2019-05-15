@@ -24,3 +24,77 @@
 <button class="btn-guardar" type="submit" (click)="getVisitorManual(name.value, email.value, companyVisitor.value, comunero.value, comuneroCompany.value)">Guardar</button>
 </form>
 </article>
+<!-- Añadiendo maquetado para la vista de agregar nuevos invitados por parte del maganement -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Comunal - New visitor</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<script>
+    function focusInput(id){
+        document.getElementById(id).style.color = "#00a8cd";
+    }   
+    
+    function blurInput(id){
+      
+        document.getElementById(id).style.color = "#000013";
+    }
+    </script>
+<body>
+  <div class="container">
+      <form>
+          <div class="container-1">
+              <img src="retro.png" alt="" style="width: 40px; height: 40px;">
+               <h4 class="dot">Nuevo visitante</h4>
+          </div>
+          <div class="container-2">
+          <div class="form-group">
+              
+            <label id="name" for="exampleInputEmail1">Tipo de visitantes</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombres completos" 
+            onfocus="focusInput('name')" onblur="blurInput('name')">
+            <!-- <div class="timeFecha"> -->
+            <label id="date" for="exampleInputEmail1">Fecha de llegada</label>
+            <input type="date" class="form-control" class="" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Fecha de llegada" 
+            onfocus="focusInput('date')" onblur="blurInput('date')">
+            <!-- </div> -->
+            <!-- <div class="timeHora"> -->
+             <label id="datetime" for="exampleInputEmail1">Hora de llegada</label>
+             <input type="datetime" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Hora de llegada" 
+             onfocus="focusInput('datetime')" onblur="blurInput('datetime')">
+            <!-- </div>  -->
+            <label id="names" for="exampleInputEmail1">Nombre completo</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombres completos" 
+            onfocus="focusInput('names')" onblur="blurInput('names')">
+            
+            <label id="email" for="exampleInputEmail1">Tu correo electrónico</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correo electrónico" 
+            onfocus="focusInput('email')" onblur="blurInput('email')">
+          
+            <label id="host" for="exampleInputEmail1">Anfitrión</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Anfitrión" 
+            onfocus="focusInput('host')" onblur="blurInput('host')">
+          
+            <label id="note" for="exampleInputEmail1">Notas privadas</label>
+            <input type="text-area" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Redacte una nota" 
+            onfocus="focusInput('note')" onblur="blurInput('note')">
+          </div>
+
+          <button type="button" class="btn-inicio">Registrarse</button>
+          <button type="button" class="btn-sign">Registrarse y agregar otro</button>
+        
+          </div>
+        </form> 
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
+
+    
+</body>
+</html>
