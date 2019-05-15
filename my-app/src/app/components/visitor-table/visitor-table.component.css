@@ -135,17 +135,26 @@ button{
 }
 
 .button{
+<<<<<<< HEAD
       font-family: markRegular, sans-serif;
     padding: 5px;
+=======
+    font-family: markRegular, sans-serif;
+    padding: 4px;
+>>>>>>> fe4b7d5e456e985615c570be59675bfa22201c04
     border: none;
     background :#FFd100;
     color: #000013;
     font-size: 16px;
     text-align: center;
     border-radius: 6px;
+<<<<<<< HEAD
     margin-left: 20px;
+=======
+    width: 15%;
+>>>>>>> fe4b7d5e456e985615c570be59675bfa22201c04
     height: 48px;
-    margin-top: 12px;
+    margin-top: 14px;
 }
 .botones{
     display: flex;
@@ -180,4 +189,17 @@ button{
         padding: 0 50px;
         width: 100%;
   }
+}
+ 
+tbody td{
+  width: 10%;
+  text-align: center;  
+}
+.imagen{
+  width: 35%;
+  height: 50px;
+  border-radius: 50%;
+  margin: auto;
+  display: block;
+
 }

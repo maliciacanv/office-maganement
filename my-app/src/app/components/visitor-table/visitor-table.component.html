@@ -13,7 +13,6 @@
             <th scope="col">Nombre</th>
             <th scope="col">Empresa</th>
             <th scope="col">Comunero</th>
-            <th scope="col">Empresa a la que visita</th>
             <th scope="col">Hora de entrada</th>
             <th scope="col">Hora de salida  </th>
             <th scope="col">              </th>
@@ -21,11 +20,10 @@
     </thead>
     <tbody>
         <tr css="table" scope="row" *ngFor="let visitor of visitors | filter: filterVisitante">
-            <td>{{visitor.foto}}</td>
+            <td><img class="imagen" src="https://i.ibb.co/rZpqv7m/fondo-1.png"></td>
             <td>{{visitor.nombre}}</td>
-            <td>{{visitor.empresaVistante}}</td>
+            <td>{{visitor.empresaVisitante}}</td>
             <td>{{visitor.persona}}</td>
-            <td>{{visitor.empresaPorVisitada}}</td>
             <td>{{visitor.fecha.toDate() | date: 'short'}}</td>
             <td>{{today| date: 'short'}}</td>
             <td> <button type="button" class="btn-finalizar" (click)="getOutVisitor(visitors, visitor.id)">Finalizar visita</button> </td>

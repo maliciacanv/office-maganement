@@ -9,13 +9,17 @@
 </div> -->
 <div>
     <div class="contenido-personas">
-        <input  #name type="text" placeholder="Ingresar nombre">
-        <button type="button">+</button> <button type="button">-</button>
+        <input  #name type="text" placeholder="Ingresar nombre" autocomplete="name">
+        <button type="button" (click)="sumarCantidad()">+</button>
+        <span>
+        {{cantidadDvisitantes}}
+        </span>
+        <button type="button" (click)="restarCantidad()">-</button>
     </div>
-    <input #email type="text" placeholder="Ingresar correo" required>
-    <input #companyVisitor type="text" placeholder="Empresa de donde viene" required>
-    <input #comunero  type="text" placeholder="A quien visita?" required>
-    <input #comuneroCompany type="text" placeholder="Empresa a la que visita" required>
+    <input #email type="text" placeholder="Ingresar correo" required autocomplete="email">
+    <input #companyVisitor type="text" placeholder="Empresa de donde viene" required autocomplete="companyVisitor">
+    <input #comunero  type="text" placeholder="A quien visita?" required autocomplete="comunero">
+    <input #comuneroCompany type="text" placeholder="Empresa a la que visita" required autocomplete="comuneroCompany">
 </div>
 <button class="btn-guardar" type="submit" (click)="getVisitorManual(name.value, email.value, companyVisitor.value, comunero.value, comuneroCompany.value)">Guardar</button>
 </form>
