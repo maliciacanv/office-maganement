@@ -1,6 +1,6 @@
 <app-menu></app-menu>
 <h1>Visitantes</h1>
-<input type="text" name="filterVisitante" placeholder="Buscar visitante" [(ngModel)]="filterVisitante" >
+<input type="text" name="filterVisitante" placeholder="Buscar visitante" [(ngModel)]="filterVisitante">
 <button class="" routerLink="/new-visitor">Nuevo visitante</button>
 <table>
     <thead>
@@ -16,12 +16,12 @@
         <tr *ngFor="let visitor of visitors | filter: filterVisitante">
             <td>{{visitor.foto}}</td>
             <td>{{visitor.nombre}}</td>
-            <td>{{visitor.empresaVistante}}</td>
+            <td>{{visitor.empresaVisitante}}</td>
             <td>{{visitor.persona}}</td>
-            <td>{{visitor.empresaVisitda}}</td>
-            <td>{{visitor.fecha | date: 'short'}}</td>
-            <td>{{visitor.salida}}</td>
-            <td> <button>Finalizar visita</button> </td>
+            <td>{{visitor.empresaPorVisitada}}</td>
+            <td>{{visitor.fecha.toDate() | date: 'short'}}</td>
+            <td>{{today| date: 'short'}}</td>
+            <td><button (click)="getOutVisitor(visitors, visitor.id)">Finalizar visita</button></td>
         </tr>
     </tbody>
 </table>
