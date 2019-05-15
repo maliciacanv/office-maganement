@@ -1,11 +1,40 @@
-<form>
-    <div class="form-group">
-        <label for="">Correo electronico</label>
-        <input #email id="email" type="email" placeholder="Ingresa un correo electronico" name="uname">
-        <label for="">contraseña</label>
-        <input #password id="password" type="password" autocomplete="current-password" placeholder="Contraseña de 6 caracteres" name="psw" required>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/logo.ico.png" alt="">
+        </div>
+    </header>
+    <form class="contenedor">
+            <h1 class="tittle">Iniciar Sesión</h1>
+        <div class="form-group">
+            <label for="">Correo electronico *</label>
+            <input #email id="email" type="email" placeholder="Ingresa un correo electronico" name="uname">
+            <label for="">contraseña *</label>
+            <input #password id="password" type="password" autocomplete="current-password" placeholder="Contraseña de 6 caracteres" name="psw" required>
+        </div>
+        <button type="button" class="btn-sesion" (click)="addUser(email.value, password.value)">Iniciar sesión</button>
+    </form>
+    <div class="field checkbox-container">
+            <label class="checkbox">
+                <input type="checkbox">
+            <div class="checkmark">
+                
+            </div>
+            <div class="label">
+                <p class="principal">Acepto los terminos y condiciones establecidos en comunal</p>
+                <p class="subtitule">He leido las letras pequeñas.</p>
+            </div>
+        </label>
     </div>
-    <button type="button" (click)="addUser(email.value, password.value)">Iniciar sesión</button>
-</form>
-
-<!-- <button>Google</button> -->
+    
+</body>
+</html>
