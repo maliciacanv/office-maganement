@@ -1,27 +1,57 @@
+
+<!DOCTYPE html>
 <app-menu></app-menu>
-<h1>Visitantes</h1>
-<input type="text" name="filterVisitante" placeholder="Buscar visitante" [(ngModel)]="filterVisitante">
-<button class="" routerLink="/new-visitor">Nuevo visitante</button>
-<table>
+<header>
+    <div class="contenedor-header">
+        <div class="logo">
+            <img src="../img/logo.ico.png" alt="">
+        </div>
+        <nav class="menu">
+            <button type="button"><img src="../img/visitante.png">Visitantes</button>
+            <button type="button"><img src="../img/reunion.png">Invitados</button>
+        </nav>
+    </div>
+    
+</header>
+<div class="container">
+<h1 class="tittle-table">Visitantes</h1>
+<input class="input-table" type="text" name="filterVisitante" placeholder="Buscar visitante"  >
+<div class="container-responsive">
+<table class= "container-table">
     <thead>
-        <th>Foto</th>
-        <th>Nombre</th>
-        <th>Empresa</th>
-        <th>Comunero</th>
-        <th>Empresa a la que visita</th>
-        <th>Hora de entrada</th>
-        <th>Hora de salida</th>
+        
+            <th scope="col">Foto</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Empresa</th>
+            <th scope="col">Comunero</th>
+            <th scope="col">Empresa a la que visita</th>
+            <th scope="col">Hora de entrada</th>
+            <th scope="col">Hora de salida  </th>
+            <th scope="col">              </th>
+        
     </thead>
     <tbody>
-        <tr *ngFor="let visitor of visitors | filter: filterVisitante">
+        <tr css="table" scope="row">
             <td>{{visitor.foto}}</td>
             <td>{{visitor.nombre}}</td>
-            <td>{{visitor.empresaVisitante}}</td>
+            <td>{{visitor.empresaVistante}}</td>
             <td>{{visitor.persona}}</td>
-            <td>{{visitor.empresaPorVisitada}}</td>
-            <td>{{visitor.fecha.toDate() | date: 'short'}}</td>
-            <td>{{today| date: 'short'}}</td>
-            <td><button (click)="getOutVisitor(visitors, visitor.id)">Finalizar visita</button></td>
+            <td>{{visitor.empresaVisitda }}</td>
+            <td>{{visitor.fecha}}</td>
+            <td>{{visitor.salida}}</td>
+            <td> <button class="btn-finalizar">Finalizar visita</button> </td>
         </tr>
+        <tr css="table">
+                <td>{{visitor.foto}}</td>
+                <td>{{visitor.nombre}}</td>
+                <td>{{visitor.empresaVistante}}</td>
+                <td>{{visitor.persona}}</td>
+                <td>{{visitor.empresaVisitda}}</td>
+                <td>{{visitor.fecha}}</td>
+                <td>{{visitor.salida}}</td>
+                <td> <button class="btn-finalizar">Finalizar visita</button> </td>
+            </tr>
     </tbody>
 </table>
+</div>
+</div>
