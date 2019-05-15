@@ -1,16 +1,16 @@
 @font-face {
     font-family: montserratRegular;
-    src: url(../src/montserrat-regular.ttf);
+    src: url(../fonts/montserrat-regular.ttf);
   }
   @font-face {
     font-family: markRegular;
     font-weight: 400;
-    src: url(../src/Mark-Regular.ttf);
+    src: url(../fonts/Mark-Regular.ttf);
   }
   @font-face {
     font-family: tiempos;
     font-weight: 800;
-    src: url(../src/Tiempos+Headline-Black.otf);
+    src: url(../fonts/Tiempos+Headline-Black.otf);
   }
 * {
     margin : 0;
