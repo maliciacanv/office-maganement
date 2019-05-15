@@ -1,23 +1,53 @@
 <app-menu></app-menu>
-<!-- <article>
-    <form>
-        <div>
-            <h1 class="btn">Invitacion</h1>
+<div class="container">
+        <form>
+            <div class="container-1">
+                <img src="retro.png" alt="" style="width: 40px; height: 40px;">
+                 <h4 class="dot">Nueva invitación</h4>
+            </div>
+            <div class="container-2">
+            <div class="form-group">
+                
+              <label  id="name" for="exampleInputEmail1">Nombre de visitantes</label>
+              <input #nombreDvisitante type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombres completos" 
+              onfocus="focusInput('name')" onblur="blurInput('name')" required>
+              <!-- <div class="timeFecha"> -->
+              <label  id="date" for="exampleInputEmail1">Fecha de llegada</label>
+              <input #fecha type="date" class="form-control" class="" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Fecha de llegada" 
+              onfocus="focusInput('date')" onblur="blurInput('date')">
+              <!-- </div> -->
+              <!-- <div class="timeHora"> -->
+               <label id="datetime" for="exampleInputEmail1">Hora de llegada</label>
+               <input #hora type="datetime" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Hora de llegada" 
+               onfocus="focusInput('datetime')" onblur="blurInput('datetime')">
+              <!-- </div>  -->
+              <!-- <label #nombre id="names" for="exampleInputEmail1">Nombre completo</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombres completos" 
+              onfocus="focusInput('names')" onblur="blurInput('names')" required> -->
+              
+              <label  for="exampleInputEmail1">Tu correo electrónico</label>
+              <input #email type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correo electrónico" 
+              onfocus="focusInput('email')" onblur="blurInput('email')" required>
+            
+              <label id="host" for="exampleInputEmail1">Anfitrión</label>
+              <input #empresaVisitada type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Anfitrión" 
+              onfocus="focusInput('host')" onblur="blurInput('host')" required>
+            
+              <label id="note" for="exampleInputEmail1">Notas privadas</label>
+              <input #notas type="text-area" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Redacte una nota" 
+              onfocus="focusInput('note')" onblur="blurInput('note')">
+            </div>
+            <button type="submit" class="btn-inicio" (click)="enviarInvitados(nombreDvisitante.value, fecha.value,hora.value, email.value, empresaVisitada.value, notas.value)" 
+            data-toggle="modal" data-target=".bd-example-modal-sm">Enviar invitación</button>
+
+            <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-sm">
+                  <div class="modal-content">
+                      <img src="../../../assets/imagenes/logo.ico.png" width="50px" height="50px">
+                      <h4 class="text-center">...Tu invitación fue enviado con exito!!!</h4>
+                  </div>
+              </div>
+          </div>
         </div>
-     <div>
-            <img src="" alt="foto del usuario registrado manual">
-        </div> -->
-        <!-- <div>
-            <input #name type="text" placeholder="Ingresar nombre">
-            <span>+</span>
-            <span>-</span>
-        </div>
-        <input #email type="text" placeholder="Ingresar correo" required>
-        <input #companyVisitor type="text" placeholder="Empresa de donde viene" required>
-        <input #comunero type="text" placeholder="A quien visita?" required>
-        <input #comuneroCompany type="text" placeholder="Empresa a la que visita" required>
-        <div>
-            <button class="btn" type="submit">Guardar</button>
-        </div>
-    </form> -->
-<!-- </article> -->
+      </form> 
+    </div>
