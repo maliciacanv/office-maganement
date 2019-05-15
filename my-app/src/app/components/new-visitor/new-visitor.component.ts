@@ -15,8 +15,8 @@ export class NewVisitorComponent {
   cantidadDvisitantes = 0;
   constructor(public firestore: FirebaseServiceService) { }
 
-  getVisitorManual(name, email, companyVisitador, comunero, comuneroVisitador,userId){
-    this.firestore.addVisitors(name, email, companyVisitador, comunero, comuneroVisitador,userId)
+  getVisitorManual(name, email, companyVisitador, comunero, comuneroVisitador){
+    this.firestore.addVisitors(name, email, companyVisitador, comunero, comuneroVisitador)
   }
  
   sumarCantidad(){
