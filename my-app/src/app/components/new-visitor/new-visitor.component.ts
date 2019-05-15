@@ -8,7 +8,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./new-visitor.component.css']
 })
 export class NewVisitorComponent {
-  onSubmit(f: NgForm){
+  onSubmit(f: NgForm) {
     f.resetForm();
   }
   constructor(public firestore: FirebaseServiceService) { }
@@ -16,6 +16,4 @@ export class NewVisitorComponent {
   getVisitorManual(name, email, companyVisitador, comunero, comuneroVisitador){
     this.firestore.addVisitors(name, email, companyVisitador, comunero, comuneroVisitador)
   }
-
-
 }
