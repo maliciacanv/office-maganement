@@ -1,0 +1,50 @@
+@font-face {
+    font-family: montserratRegular;
+    src: url(../../../assets/fonts/Montserrat-Regular.ttf);
+  }
+  @font-face {
+    font-family: markRegular;
+    font-weight: 400;
+    src: url(../../../assets/fonts/Mark-Regular.ttf);
+  }
+  @font-face {
+    font-family: tiempos;
+    font-weight: 800;
+    src: url(../../../assets/fonts/Tiempos+Headline-Black.otf);
+  }
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+  }
+body{
+  background-color: #fafafa;
+}
+.logo{
+    padding: 18px 0px 0px;
+}
+.logo img{
+  height: 45px;
+  padding: 0px 20px;
+  float:left;
+}
+.menu{
+  margin-left: 48%;
+}
+.menu button{
+  color: #000013;
+  background-color: #FFffff;
+  height: 50px;
+  height: 90%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #f0f0f0;
+  display: inline-block;
+  font-size: 14px;
+  font-family: markMedium;
+  margin-right: 5px;
+}
+.menu img{
+  height: 35px;
+}
+

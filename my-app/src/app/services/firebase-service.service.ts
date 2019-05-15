@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { AngularFireAuthModule } from '@angular/fire/auth';
+import { BehaviorSubject } from 'rxjs';
 import { AngularFireAuth } from '@angular/fire/auth';
 
 
@@ -10,8 +10,6 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class FirebaseServiceService {
 
-  constructor(public firestore: AngularFirestore,
-              public auth: AngularFireAuth) { }
   public info = [];
   public Visitor = {
     nombre: '',
@@ -22,6 +20,12 @@ export class FirebaseServiceService {
     fechaDeSalida:''
   };
 
+  public visitantesData = new BehaviorSubject([]);
+  visitantes = this.visitantesData.asObservable();
+
+  constructor(public firestore: AngularFirestore,
+              public auth: AngularFireAuth) { }
+
   getVisitors() {
     return this.firestore.collection('visitors').valueChanges();
   }
@@ -29,6 +33,7 @@ export class FirebaseServiceService {
   registerWithEmail(email: string, password: string) {
     return this.auth.auth.signInWithEmailAndPassword(email, password);
   }
+  
   addVisitors(name, email, companyVisitador, comunero, comuneroVisitador) {
   const newObj = {
     ...this.Visitor,

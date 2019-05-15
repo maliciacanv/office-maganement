@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule, AngularFirestore } from '@angular/fire/firestore';
 import { FirebaseServiceService } from '../../services/firebase-service.service';
 
 
@@ -10,7 +8,7 @@ import { FirebaseServiceService } from '../../services/firebase-service.service'
   styleUrls: ['./visitor-table.component.css']
 })
 export class VisitorTableComponent implements OnInit {
-  today: any = '';
+  today = '';
   visitors: any;
  filterVisitante = '';
 
@@ -18,7 +16,6 @@ export class VisitorTableComponent implements OnInit {
 
     this.firestore.getVisitors().subscribe((data) => {
       this.visitors = data;
-      
     });
 
   }
@@ -27,15 +24,15 @@ export class VisitorTableComponent implements OnInit {
   }
 
   getOutVisitor(obj: any, id: any) {
-const arraysito = [];
-arraysito.push(obj)
-const obje = arraysito.map((ele:any) => {
-      console.log(ele)
-      if(ele.id === id){
-        return this.today= new Date();
-      }
-    })
-this.today = obje;
+// const arraysito = [];
+// arraysito.push(obj)
+// const obje = arraysito.map((ele:any) => {
+//       console.log(ele)
+//       if(ele.id === id){
+//         return this.today= new Date();
+//       }
+//     })
+// this.today = obje;
 
   // this.firestore.getDateForVisitorOut(obj, id);
   console.log(obj, id);

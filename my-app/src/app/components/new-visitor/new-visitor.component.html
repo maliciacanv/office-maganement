@@ -1,23 +1,22 @@
 <app-menu></app-menu>
+
 <article>
-    <form>
-        <div>
-            <button class="btn">Nuevo visitante</button>
-        </div>
-        <!-- <div>
-            <img src="" alt="foto del usuario registrado manual">
-        </div> -->
-        <div>
-            <input #name type="text" placeholder="Ingresar nombre">
-            <span>+</span>
-            <span>-</span>
-        </div>
-        <input #email type="text" placeholder="Ingresar correo" required>
-        <input #companyVisitor type="text" placeholder="Empresa" required>
-        <input #comunero type="text" placeholder="A quien visitas?" required>
-        <input #comuneroCompany type="text" placeholder="Empresa a la que visita" required>
-        <div>
-            <button class="btn" type="submit" (click)="getVisitorManual(name.value, email.value, companyVisitor.value, comunero.value, comuneroCompany.value)">continuar</button>
-        </div>
-    </form>
+   
+<form class="container-form">
+<h1 class="tittle">Registro</h1>
+<!-- <div>
+    <img src="" alt="foto del usuario registrado manual">
+</div> -->
+<div>
+    <div class="contenido-personas">
+        <input  #name type="text" placeholder="Ingresar nombre">
+        <button type="button">+</button> <button type="button">-</button>
+    </div>
+    <input #email type="text" placeholder="Ingresar correo" required>
+    <input #companyVisitor type="text" placeholder="Empresa de donde viene" required>
+    <input #comunero  type="text" placeholder="A quien visita?" required>
+    <input #comuneroCompany type="text" placeholder="Empresa a la que visita" required>
+</div>
+<button class="btn-guardar" type="submit" (click)="getVisitorManual(name.value, email.value, companyVisitor.value, comunero.value, comuneroCompany.value)">Guardar</button>
+</form>
 </article>
