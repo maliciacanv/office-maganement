@@ -10,7 +10,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class FirebaseServiceService {
 
-  constructor(public firestore: AngularFirestore, 
+  constructor(public firestore: AngularFirestore,
               public auth: AngularFireAuth) { }
   public Visitor = {
     nombre: '',
@@ -18,29 +18,26 @@ export class FirebaseServiceService {
     empresaPorVisitada: '',
     persona: '',
     empresaVisitante: '',
+    id:""
   };
-  
+
   getVisitors() {
     return this.firestore.collection('visitors').valueChanges();
   }
 
   registerWithEmail(email: string, password: string) {
-    return this.auth.auth.createUserWithEmailAndPassword(email, password);
-  }
-  loginEmailUser(email: string, password: string) {
     return this.auth.auth.signInWithEmailAndPassword(email, password);
   }
-  addVisitors(name, email, companyVisitador, comunero, comuneroVisitador){
+  addVisitors(name, email, companyVisitador, comunero, comuneroVisitador,userId) {
   const newObj = {
     ...this.Visitor,
     nombre: name,
     correo: email,
     empresaPorVisitada: companyVisitador,
     persona: comunero,
-    empresaVisitante: comuneroVisitador
+    empresaVisitante: comuneroVisitador,
+    id:userId
   };
-    this.firestore.collection('visitors').add(newObj);
-    console.log('se envio a base de datos', newObj)
-  };
-
+  this.firestore.collection('visitors').add(newObj);
+  }
 }

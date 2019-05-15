@@ -15,6 +15,7 @@ import { FirebaseServiceService } from './services/firebase-service.service';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { FormsModule } from '@angular/forms';
+import { InvitationsComponent } from './components/invitations/invitations.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     MenuComponent,
     NewVisitorComponent,
     FilterPipe,
-    LoginComponent
+    LoginComponent,
+    InvitationsComponent
   ],
   
   imports: [

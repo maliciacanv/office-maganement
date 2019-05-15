@@ -2,7 +2,7 @@
 <article>
     <form>
         <div>
-            <button class="btn">Nuevo visitante</button>
+            <h1 class="btn">Invitacion</h1>
         </div>
         <!-- <div>
             <img src="" alt="foto del usuario registrado manual">
@@ -13,11 +13,11 @@
             <span>-</span>
         </div>
         <input #email type="text" placeholder="Ingresar correo" required>
-        <input #companyVisitor type="text" placeholder="Empresa" required>
-        <input #comunero type="text" placeholder="A quien visitas?" required>
+        <input #companyVisitor type="text" placeholder="Empresa de donde viene" required>
+        <input #comunero type="text" placeholder="A quien visita?" required>
         <input #comuneroCompany type="text" placeholder="Empresa a la que visita" required>
         <div>
-            <button class="btn" type="submit"let i ="index" (click)="getVisitorManual(name.value, email.value, companyVisitor.value, comunero.value, comuneroCompany.value,i)">continuar</button>
+            <button class="btn" type="submit">Guardar</button>
         </div>
     </form>
 </article>
