@@ -21,11 +21,11 @@ export class LoginComponent implements OnInit {
   addUser(email, password) {
     console.log(email)
     this.authServices.registerWithEmail(email, password).then( (data) => {
-      alert('Loggeado correctamente');
+      alert('Administrador Logueado correctamente');
       console.log(data);
       this.router.navigate(['admin']);
     }).catch((error) => {
-      alert('Ocurrioo un error');
+      alert('Ocurrió un error');
       console.log(error);
     });
   }

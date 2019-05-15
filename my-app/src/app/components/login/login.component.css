@@ -24,28 +24,39 @@ body{
     padding: 18px 0px 0px;
 }
 .logo img{
-  height: 45px;
-  padding: 0px 20px
+  /* height: 45px; */
+  padding: 0px 20px;
+  margin: auto;
+  width: 120px; 
+  
 }
 .contenedor{
+  background-color: #fafafa;
     padding: 16px;
-    width:96%;
     margin: auto;
+  width: 100%;
+  
+  max-width: 570px;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 6%; 
   }
   .tittle{
     font-family: tiempos, sans-serif;
-    font-size: 36px;
+    font-size: 46px;
     margin-bottom: 10px;
 }
   label {
     font-family: markRegular, sans-serif;
-    font-size: 12px;
+    font-size: 14px;
+    margin-top: 20px;
+    width: 100%;
   }
 input {
     width: 100%;
     padding: 12px;
-    margin-top: 2px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: inline-block;
     background-color: #ffffff;
     border: 1px solid #f0f0f0;
@@ -54,13 +65,14 @@ input {
     font-family: montserratRegular;
     color: #0000139c;
     border:none;
+    height: 42px;
   }
   input:focus{
     outline: none !important;
     border:1px solid #00a8cd
   }
   .btn-sesion{
-    font-family: markRegular, sans-serif;
+    font-family: montserratRegular;
     margin-top: 16px;
     padding: 1px;
     border: none;
@@ -71,6 +83,7 @@ input {
     border-radius: 6px;
     width: 100%;
     height: 48px;
+    font-weight: bolder;
   }
       
     .checkbox-container .checkbox input:checked ~ .checkmark {
@@ -94,3 +107,22 @@ input {
       border-radius: 4px;
       border: 1px solid #00a8cd; 
     }
+  
+ .img-inicio img{
+/* width: 30%; */
+background-size: 20%;
+overflow: hidden;
+border: 20px;
+padding: 15px;
+width: 567px;
+/* margin-top: -30%; */
+
+ }
+ .contenedor{
+   position: absolute;
+   transform: translateX(10%) translateY(-70%);
+   top: 50%;
+   left: 50%;
+   
+ }
+ 
