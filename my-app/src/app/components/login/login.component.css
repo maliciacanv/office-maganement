@@ -20,57 +20,66 @@
 body{
   background-color: #fafafa;
 }
- .logo{
-    padding: 18px 0px 0px;
-}
-.logo img{
-  height: 45px;
-  padding: 0px 20px
+ .logo img{
+   width: 70px;
+   height: 70px;
+   margin-left: 50px;
+   margin-top: 15px;
 }
 .contenedor{
     padding: 16px;
-    width:96%;
     margin: auto;
+    margin-top: 10px;
+    display: block;
+    background-color: rgb(248, 204, 6,0.8);
+    width: 40%;
+    height: 60vh;
+    border-radius: 5px;
   }
   .tittle{
     font-family: tiempos, sans-serif;
     font-size: 36px;
+    text-align: center;
     margin-bottom: 10px;
 }
   label {
     font-family: markRegular, sans-serif;
-    font-size: 12px;
+    font-size: 12px;  
   }
 input {
     width: 100%;
     padding: 12px;
     margin-top: 2px;
     margin-bottom: 10px;
-    display: inline-block;
     background-color: #ffffff;
-    border: 1px solid #f0f0f0;
+    border: 1px solid #f8f9fa;
     border-radius: 6px;
     font-size: 16px;
     font-family: montserratRegular;
     color: #0000139c;
-    border:none;
   }
   input:focus{
     outline: none !important;
     border:1px solid #00a8cd
   }
   .btn-sesion{
+    margin: auto;
+    display: block;
     font-family: markRegular, sans-serif;
-    margin-top: 16px;
+    margin-top: 30px;
     padding: 1px;
-    border: none;
-    background :#FFd100;
+    border: 2px solid white;
+    background :rgb(248, 204, 6,0.5);
     color: #000013;
     font-size: 16px;
     text-align: center;
     border-radius: 6px;
-    width: 100%;
+    width: 50%;
     height: 48px;
+  }
+  .btn-sesion:hover{
+    background-color: white;
+
   }
       
     .checkbox-container .checkbox input:checked ~ .checkmark {

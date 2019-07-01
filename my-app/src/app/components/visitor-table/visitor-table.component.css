@@ -61,20 +61,19 @@
 }
 .container-responsive{
   display: block;
-    overflow-x: auto;
+  overflow-x: auto;
   width: 100%;
-  background-color: #fafafa;
-  border-radius: 8px;
+  background-color: rgba(192, 187, 187, 0.1);
 }
 .container-table{
     margin-bottom: 1em;
     max-width:100%;
     width:100%;
-    border-collapse: collapse;
+    border: 1px solid black;
 }
 .container-table tbody tr:hover,
   .container-table tbody tr:focus{
-    background-color: rgba(0, 0, 0, 0.075);
+    background-color:white;
 }
 .container-table td{
     border-bottom: 1px solid #dee2e6;
@@ -92,14 +91,14 @@
   }
   
   .input-table{
-  max-width: 100%;
+  width: 50%;
   padding: 12px;
   margin-top: 15px;
   margin-bottom: 15px;
   display: inline-block;
   background-color: #ffffff;
-  border: 1px solid #f0f0f0;
-  border-radius: 6px;
+  border: 1px solid rgba(70, 145, 243, 0.616);
+  border-radius: 50px;
   font-size: 16px;
   font-family: montserratRegular;
   color: #0000139c;
@@ -110,18 +109,6 @@
     border: 1px solid #00a8cd;
   }
   
-.btn-finalizar{
-    font-family: markRegular, sans-serif;
-    padding: 5px;
-    border: none;
-    background :#FFd100;
-    color: #000013;
-    font-size: 16px;
-    text-align: center;
-    border-radius: 6px;
-    width: 100%;
-    height: 48px;
-}
 
 .button{
     font-family: markRegular, sans-serif;

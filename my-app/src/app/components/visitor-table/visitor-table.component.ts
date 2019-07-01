@@ -10,7 +10,10 @@ import { FirebaseServiceService } from '../../services/firebase-service.service'
 export class VisitorTableComponent implements OnInit {
   today = '';
   visitors: any;
- filterVisitante = '';
+  filterVisitante = '';
+  date: any;
+
+
 
   constructor(public firestore: FirebaseServiceService) {
 
@@ -23,18 +26,11 @@ export class VisitorTableComponent implements OnInit {
   ngOnInit() {
   }
 
-  getOutVisitor(obj: any, id: any) {
-// const arraysito = [];
-// arraysito.push(obj)
-// const obje = arraysito.map((ele:any) => {
-//       console.log(ele)
-//       if(ele.id === id){
-//         return this.today= new Date();
-//       }
-//     })
-// this.today = obje;
+  getOutVisitor(id) {
+    console.log(id)
+  //   if()
+  //   const newDate= new Date();
+  //   this.date = newDate
+}
 
-  // this.firestore.getDateForVisitorOut(obj, id);
-  console.log(obj, id);
-  }
 }

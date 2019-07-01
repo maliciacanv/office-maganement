@@ -7,9 +7,10 @@
 <form class="contenedor">
         <h1 class="tittle">Iniciar Sesión</h1>
     <div class="form-group">
-        <label for="">Correo electronico *</label>
+        <label for="">Correo electronico *</label> <br>
         <input #email id="email" type="email" placeholder="Ingresa un correo electronico" name="uname" autocomplete="email" required>
-        <label for="">contraseña *</label>
+       <br>
+        <label for="">Contraseña *</label> <br>
         <input #password id="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" minlength="6" maxlength="15" title="Debe contener min 6 caracteres y max 15 caracteres, debe tener min 1 número y una mayúscula" autocomplete="password" placeholder="Contraseña de 6 caracteres" name="psw" required>
     </div>
     <button type="submit" class="btn-sesion" (click)="addUser(email.value, password.value)">Iniciar sesión</button>

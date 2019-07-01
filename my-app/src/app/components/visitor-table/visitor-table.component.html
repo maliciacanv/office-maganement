@@ -2,31 +2,30 @@
 <div class="container">
 <h1 class="tittle-table">Visitantes</h1>
 <div class="botones">
-    <input class="input-table" type="text" name="filterVisitante" placeholder="Buscar visitante" [(ngModel)]="filterVisitante" >
-    <button class="button" routerLink="/new-visitor">Nuevo visitante</button>  
+    <input class="input-table"  type="text" name="filterVisitante" placeholder="   Buscar visitante..." [(ngModel)]="filterVisitante" >
+    <button class="button ml-5" routerLink="/new-visitor">Nuevo visitante</button>  
 </div>
 <div class="container-responsive">
-<table class= "container-table">
+<table class= "container-table text-center table-bordered">
     <thead>
-        
+            <th>#</th>
             <th scope="col">Foto</th>
             <th scope="col">Nombre</th>
             <th scope="col">Empresa</th>
             <th scope="col">Comunero</th>
             <th scope="col">Hora de entrada</th>
             <th scope="col">Hora de salida  </th>
-            <th scope="col">              </th>
         
     </thead>
     <tbody>
-        <tr css="table" scope="row" *ngFor="let visitor of visitors | filter: filterVisitante">
+        <tr css="table" scope="row" *ngFor="let visitor of visitors | filter: filterVisitante; let i=index">
+            <td>{{i + 1}}</td>
             <td><img class="imagen" src="https://i.ibb.co/rZpqv7m/fondo-1.png"></td>
             <td>{{visitor.nombre}}</td>
             <td>{{visitor.empresaVisitante}}</td>
             <td>{{visitor.persona}}</td>
             <td>{{visitor.fecha.toDate() | date: 'short'}}</td>
-            <td>{{today| date: 'short'}}</td>
-            <td> <button type="button" class="btn-finalizar" (click)="getOutVisitor(visitors, visitor.id)">Finalizar visita</button> </td>
+            <td> <a type="button" (click)="getOutVisitor(visitor.id)"><i class="fas fa-check-circle"></i></a> </td>
         </tr>
     </tbody>
 </table>

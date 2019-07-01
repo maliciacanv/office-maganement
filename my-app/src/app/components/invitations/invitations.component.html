@@ -1,56 +1,58 @@
 <app-menu></app-menu>
-<div class="container-img">
-  <img src="../../../assets/imagenes/min-events.jpg" alt="">
-</div>
 <div class="container">
-        <form>
-            <div class="container-1">
-                <img src="../../../assets/imagenes/retro.png" alt="" style="width: 40px; height: 40px;">
-                 <h4 class="dot">Nueva invitación</h4>
-            </div>
-            <div class="container-2">
-            <div class="form-group">
-                
-              <label  id="name" for="exampleInputEmail1">Nombre de visitantes</label>
-              <input #nombreDvisitante type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombres completos" 
-              onfocus="focusInput('name')" onblur="blurInput('name')" required>
-              <!-- <div class="timeFecha"> -->
-              <label  id="date" for="exampleInputEmail1">Fecha de llegada</label>
-              <input #fecha type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Fecha de llegada" 
-              onfocus="focusInput('date')" onblur="blurInput('date')">
-              <!-- </div> -->
-              <!-- <div class="timeHora"> -->
-               <label id="datetime" for="exampleInputEmail1">Hora de llegada</label>
-               <input #hora type="datetime" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Hora de llegada" 
-               onfocus="focusInput('datetime')" onblur="blurInput('datetime')">
-              <!-- </div>  -->
-              <!-- <label #nombre id="names" for="exampleInputEmail1">Nombre completo</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombres completos" 
-              onfocus="focusInput('names')" onblur="blurInput('names')" required> -->
-              
-              <label  for="exampleInputEmail1">Tu correo electrónico</label>
-              <input #email type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Correo electrónico" 
-              onfocus="focusInput('email')" onblur="blurInput('email')" required>
-            
-              <label id="host" for="exampleInputEmail1">Anfitrión</label>
-              <input #empresaVisitada type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Anfitrión" 
-              onfocus="focusInput('host')" onblur="blurInput('host')" required>
-            
-              <label id="note" for="exampleInputEmail1">Notas privadas</label>
-              <input #notas type="text-area" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Redacte una nota" 
-              onfocus="focusInput('note')" onblur="blurInput('note')">
-            </div>
-            <button type="submit" class="btn-inicio" (click)="enviarInvitados(nombreDvisitante.value, fecha.value,hora.value, email.value, empresaVisitada.value, notas.value)" 
-            data-toggle="modal" data-target=".bd-example-modal-sm">Enviar invitación</button>
+  <div class="container-form">
+      <div class="ml-5 mt-3">
+          <h4 class="dot">Nueva invitación</h4>
+     </div>
+     <div class="form-group">  
+       <form>
+           <label  id="name" for="exampleInputEmail1">Nombre de visitantes</label>
+           <input #nombreDvisitante type="text"  id="exampleInputEmail1"  placeholder="Nombres completos" 
+           onfocus="focusInput('name')" onblur="blurInput('name')" required>
+           <!-- <div class="timeFecha"> -->
+           <label  id="date" for="exampleInputEmail1">Fecha de llegada</label>
+           <input #fecha type="date" id="exampleInputEmail1"  placeholder="Fecha de llegada">
+           <!-- </div> -->
+           <!-- <div class="timeHora"> -->
+            <label id="datetime" for="exampleInputEmail1">Hora de llegada</label>
+            <input #hora type="datetime"  id="exampleInputEmail1"  placeholder="Hora de llegada" 
+            onfocus="focusInput('datetime')" onblur="blurInput('datetime')">
+           <!-- </div>  -->
+           <!-- <label #nombre id="names" for="exampleInputEmail1">Nombre completo</label>
+           <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombres completos" 
+           onfocus="focusInput('names')" onblur="blurInput('names')" required> -->
+           
+           <label  for="exampleInputEmail1">Tu correo electrónico</label>
+           <input #email type="email"  id="exampleInputEmail1" placeholder="Correo electrónico" 
+           onfocus="focusInput('email')" onblur="blurInput('email')" required>
+         
+           <label id="host" for="exampleInputEmail1">Anfitrión</label>
+           <input #empresaVisitada type="text"  id="exampleInputEmail1"  placeholder="Anfitrión" 
+           onfocus="focusInput('host')" onblur="blurInput('host')" required>
+         
+           <label id="note" for="exampleInputEmail1">Notas privadas</label>
+           <input #notas type="text-area"  id="exampleInputEmail1"  placeholder="Redacte una nota" 
+           onfocus="focusInput('note')" onblur="blurInput('note')">
+       </form>                
+      
+     </div>
+     <button type="submit" class="btn-inicio" (click)="enviarInvitados(nombreDvisitante.value, fecha.value,hora.value, email.value, empresaVisitada.value, notas.value)" 
+     data-toggle="modal" data-target=".bd-example-modal-sm">Enviar invitación</button>
 
-            <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-sm">
-                  <div class="modal-content">
-                      <img src="../../../assets/imagenes/logo.ico.png" width="50px" height="50px">
-                      <h4 class="text-center">...Tu invitación fue enviado con exito!!!</h4>
-                  </div>
-              </div>
-          </div>
-        </div>
-      </form> 
-    </div>
+     <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+       <div class="modal-dialog modal-sm">
+           <div class="modal-content">
+             <div class="modal-header">
+                 <img src="../../../assets/imagenes/logo.ico.png" width="50px" height="50px">
+             </div>
+             <div class="modal-body">
+                 <h4 class="text-center">...Tu invitación fue enviado con exito!!!</h4>
+             </div>
+           </div>
+       </div>
+     </div>
+  </div>
+  <div class="container-img mt-5">
+  <img src="../../../assets/imagenes/min-events.jpg">
+  </div>
+</div>
